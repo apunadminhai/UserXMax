@@ -46,3 +46,4 @@ urbandict
 git+https://github.com/johnwmillr/LyricsGenius.git
 covid
 python-magic
+telegraph
