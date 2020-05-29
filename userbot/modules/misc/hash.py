@@ -62,6 +62,7 @@ async def endecrypt(query):
 add_help_item(
     "hash",
     "Misc",
+    "Hash Module",
     """
     `.hash`
     **Usage:** Find the md5, sha1, sha256, sha512 of the string when written into a txt file.
