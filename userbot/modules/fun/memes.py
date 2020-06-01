@@ -609,7 +609,7 @@ WHERE = ["in the chest", "on the head", "on the butt", "on the crotch"]
 # ===========================================
 
 
-@register(outgoing=True, pattern=r"^\.(\w+)say (.*)")
+@register(outgoing=True, pattern=r"^.(\w+)say (.*)")
 async def univsaye(cowmsg):
     """ For .cowsay module, userbot wrapper for cow which says things. """
     arg = cowmsg.pattern_match.group(1).lower()
@@ -634,7 +634,7 @@ async def kek(keks):
         await keks.edit(":" + uio[i % 2])
 
 
-@register(outgoing=True, pattern=r"^\.coinflip(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^.coinflip(?: |$)(.*)")
 async def coin(event):
     r = choice(["heads", "tails"])
     input_str = event.pattern_match.group(1)
@@ -658,7 +658,7 @@ async def coin(event):
             await event.edit("The coin landed on: **Tails**.")
 
 
-@register(pattern=r"^\.slap(?: |$)(.*)", outgoing=True)
+@register(pattern=r"^.slap(?: |$)(.*)", outgoing=True)
 async def who(event):
     """ slaps a user, or get slapped if not a reply. """
     replied_user = await get_user_from_event(event)
@@ -709,7 +709,7 @@ async def lol(lel):
         await lel.edit(okay)
 
 
-@register(outgoing=True, pattern=r"^\.(yes|no|maybe|decide)$")
+@register(outgoing=True, pattern=r"^.(yes|no|maybe|decide)$")
 async def decide(event):
     decision = event.pattern_match.group(1).lower()
     message_id = event.reply_to_msg_id if event.reply_to_msg_id else None
@@ -732,25 +732,25 @@ async def fun(e):
         await e.edit(t)
 
 
-@register(outgoing=True, pattern=r"^\.fp$")
+@register(outgoing=True, pattern=r"^.fp$")
 async def facepalm(e):
     """ Facepalm  🤦‍♂ """
     await e.edit("🤦‍♂")
 
 
-@register(outgoing=True, pattern=r"^\.cry$")
+@register(outgoing=True, pattern=r"^.cry$")
 async def cry(e):
     """ y u du dis, i cry everytime !! """
     await e.edit(choice(CRI))
 
 
-@register(outgoing=True, pattern=r"^\.insult$")
+@register(outgoing=True, pattern=r"^.insult$")
 async def insult(e):
     """ I make you cry !! """
     await e.edit(choice(INSULT_STRINGS))
 
 
-@register(outgoing=True, pattern=r"^\.cp(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^.cp(?: |$)(.*)")
 async def copypasta(cp_e):
     """ Copypasta the famous meme """
     textx = await cp_e.get_reply_message()
@@ -784,7 +784,7 @@ async def copypasta(cp_e):
     await cp_e.edit(reply_text)
 
 
-@register(outgoing=True, pattern=r"^\.vapor(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^.vapor(?: |$)(.*)")
 async def vapor(vpr):
     """ Vaporize everything! """
     reply_text = list()
@@ -809,7 +809,7 @@ async def vapor(vpr):
     await vpr.edit("".join(reply_text))
 
 
-@register(outgoing=True, pattern=r"^\.str(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^.str(?: |$)(.*)")
 async def stretch(stret):
     """ Stretch it."""
     textx = await stret.get_reply_message()
@@ -829,7 +829,7 @@ async def stretch(stret):
     await stret.edit(reply_text)
 
 
-@register(outgoing=True, pattern=r"^\.zal(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^.zal(?: |$)(.*)")
 async def zal(zgfy):
     """ Invoke the feeling of chaos. """
     reply_text = list()
@@ -868,7 +868,7 @@ async def zal(zgfy):
     await zgfy.edit("".join(reply_text))
 
 
-@register(outgoing=True, pattern=r"^\.hi$")
+@register(outgoing=True, pattern=r"^.hi$")
 async def hoi(hello):
     """ Greet everyone! """
     await hello.edit(choice(HELLOSTR))
@@ -897,31 +897,31 @@ async def faces(owo):
     await owo.edit(reply_text)
 
 
-@register(outgoing=True, pattern=r"^\.react$")
+@register(outgoing=True, pattern=r"^.react$")
 async def react_meme(react):
     """ Make your userbot react to everything. """
     await react.edit(choice(FACEREACTS))
 
 
-@register(outgoing=True, pattern=r"^\.shg$")
+@register(outgoing=True, pattern=r"^.shg$")
 async def shrugger(shg):
     r""" ¯\_(ツ)_/¯ """
     await shg.edit(choice(SHGS))
 
 
-@register(outgoing=True, pattern=r"^\.chase$")
+@register(outgoing=True, pattern=r"^.chase$")
 async def police(chase):
     """ Run boi run, i'm gonna catch you !! """
     await chase.edit(choice(CHASE_STR))
 
 
-@register(outgoing=True, pattern=r"^\.run$")
+@register(outgoing=True, pattern=r"^.run$")
 async def runner_lol(run):
     """ Run, run, RUNNN! """
     await run.edit(choice(RUNS_STR))
 
 
-@register(outgoing=True, pattern=r"^\.metoo$")
+@register(outgoing=True, pattern=r"^.metoo$")
 async def metoo(hahayes):
     """ Haha yes """
     await hahayes.edit(choice(METOOSTR))
@@ -935,12 +935,12 @@ async def Oof(e):
         await e.edit(t)
 
 
-@register(outgoing=True, pattern=r"^\.10iq$")
+@register(outgoing=True, pattern=r"^.10iq$")
 async def iqless(e):
     await e.edit("♿")
 
 
-@register(outgoing=True, pattern=r"^\.moon$")
+@register(outgoing=True, pattern=r"^.moon$")
 async def moon(event):
     deq = deque(list("🌗🌘🌑🌒🌓🌔🌕🌖"))
     try:
@@ -952,7 +952,7 @@ async def moon(event):
         return
 
 
-@register(outgoing=True, pattern=r"^\.clock$")
+@register(outgoing=True, pattern=r"^.clock$")
 async def clock(event):
     deq = deque(list("🕙🕘🕗🕖🕕🕔🕓🕒🕑🕐🕛"))
     try:
@@ -964,7 +964,7 @@ async def clock(event):
         return
 
 
-@register(outgoing=True, pattern=r"^\.mock(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^.mock(?: |$)(.*)")
 async def spongemocktext(mock):
     """ Do it and find the real fun. """
     reply_text = list()
@@ -988,7 +988,7 @@ async def spongemocktext(mock):
     await mock.edit("".join(reply_text))
 
 
-@register(outgoing=True, pattern=r"^\.clap(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^.clap(?: |$)(.*)")
 async def claptext(memereview):
     """ Praise people! """
     textx = await memereview.get_reply_message()
@@ -1006,7 +1006,7 @@ async def claptext(memereview):
     await memereview.edit(reply_text)
 
 
-@register(outgoing=True, pattern=r"^\.bt$")
+@register(outgoing=True, pattern=r"^.bt$")
 async def bluetext(bt_e):
     """ Believe me, you will find this useful. """
     if await bt_e.get_reply_message() and bt_e.is_group:
@@ -1015,7 +1015,7 @@ async def bluetext(bt_e):
             "/ARE /YOU /A /STUPID /ANIMAL /WHICH /IS /ATTRACTED /TO /COLOURS?")
 
 
-@register(outgoing=True, pattern=r"^\.f (.*)")
+@register(outgoing=True, pattern=r"^.f (.*)")
 async def payf(event):
     paytext = event.pattern_match.group(1)
     pay = "{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}".format(
@@ -1025,7 +1025,7 @@ async def payf(event):
     await event.edit(pay)
 
 
-@register(outgoing=True, pattern=r"^\.lfy (.*)")
+@register(outgoing=True, pattern=r"^.lfy (.*)")
 async def let_me_google_that_for_you(lmgtfy_q):
     textx = await lmgtfy_q.get_reply_message()
     qry = lmgtfy_q.pattern_match.group(1)
@@ -1042,7 +1042,7 @@ async def let_me_google_that_for_you(lmgtfy_q):
     \n[{query}]({r.json()['shorturl']})")
 
 
-@register(pattern=r"^\.scam(?: |$)(.*)", outgoing=True)
+@register(pattern=r"^.scam(?: |$)(.*)", outgoing=True)
 async def scam(event):
     """ Just a small command to fake chat actions for fun !! """
     options = [
@@ -1076,7 +1076,7 @@ async def scam(event):
         return
 
 
-@register(pattern=r"^\.type(?: |$)(.*)", outgoing=True)
+@register(pattern=r"^.type(?: |$)(.*)", outgoing=True)
 async def typewriter(typew):
     """ Just a small command to make your keyboard become a typewriter! """
     textx = await typew.get_reply_message()

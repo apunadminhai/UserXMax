@@ -14,7 +14,7 @@ from userbot.events import register
 from userbot.utils.tgdoc import *
 
 
-@register(outgoing=True, pattern=r"^\.c(?:hat)?(\s+[\S\s]+|$)")
+@register(outgoing=True, pattern=r"^.c(?:hat)?(\s+[\S\s]+|$)")
 async def chat_info(e):
     params = e.pattern_match.group(1) or ""
     args, chat = parse_arguments(

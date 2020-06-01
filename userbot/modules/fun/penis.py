@@ -25,7 +25,7 @@ PENIS_TEMPLATE = """
 """
 
 
-@register(outgoing=True, pattern=r"^\.(?:penis|dick)\s?(.)?")
+@register(outgoing=True, pattern=r"^.(?:penis|dick)\s?(.)?")
 async def emoji_penis(e):
     emoji = e.pattern_match.group(1)
 

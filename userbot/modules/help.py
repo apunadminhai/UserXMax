@@ -28,7 +28,7 @@ def add_help_item(command, category, description, examples, keywords=None):
     CAT_ITEMS[category].append(command)
 
 
-@register(outgoing=True, pattern=r"^\.help(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^.help(?: |$)(.*)")
 async def show_help(event):
     """ For .help command,"""
     args = event.pattern_match.group(1)

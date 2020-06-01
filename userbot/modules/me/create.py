@@ -12,7 +12,7 @@ from ..help import add_help_item
 from userbot.events import register
 
 
-@register(outgoing=True, pattern=r"^\.create (b|g|c)(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^.create (b|g|c)(?: |$)(.*)")
 async def telegraphs(grop):
     """ For .create command, Creating New Group & Channel """
     if not grop.text[0].isalpha() and grop.text[0] not in ("/", "#", "@", "!"):

@@ -14,7 +14,7 @@ from userbot import BOTLOG, BOTLOG_CHATID
 from userbot.events import register
 
 
-@register(outgoing=True, pattern=r"^\.exec(?:\s+|$)([\s\S]*)")
+@register(outgoing=True, pattern=r"^.exec(?:\s+|$)([\s\S]*)")
 async def run(event):
     """ For .exec command, which executes the dynamically created program """
     reply_message = await event.get_reply_message()

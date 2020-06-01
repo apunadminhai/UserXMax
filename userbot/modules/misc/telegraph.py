@@ -88,6 +88,6 @@ add_help_item(
     "Misc",
     "Get Telegraph Link Of Media Or Text",
     """
-    `.telegraph` In response to a text or media
+    `.telegraph (media|text)` In response to a text or media
     """
 )

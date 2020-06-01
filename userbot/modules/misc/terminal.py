@@ -14,7 +14,7 @@ from userbot import BOTLOG, BOTLOG_CHATID
 from userbot.events import register
 
 
-@register(outgoing=True, pattern=r"^\.term(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^.term(?: |$)(.*)")
 async def terminal_runner(term):
     """ For .term command, runs bash commands and scripts on your server. """
     from os import geteuid

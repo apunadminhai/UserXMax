@@ -23,7 +23,7 @@ from telethon.tl.types import (
     MessageMediaPhoto)
 
 
-@register(outgoing=True, pattern=r"^\.mmf(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^.mmf(?: |$)(.*)")
 async def mim(event):
     if event.fwd_from:
         return

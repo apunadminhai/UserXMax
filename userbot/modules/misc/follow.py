@@ -12,7 +12,7 @@ from userbot.events import register
 from userbot.utils import parse_arguments, extract_urls
 
 
-@register(outgoing=True, pattern=r"^\.follow(?: |$)([\s\S]*)")
+@register(outgoing=True, pattern=r"^.follow(?: |$)([\s\S]*)")
 async def follow_url(event):
     reply_message = await event.get_reply_message()
     message_text = event.pattern_match.group(1) or ""
