@@ -411,7 +411,13 @@ add_help_item(
     """
     `.download <link|filename>` or reply to media
     **Usage:** Downloads file to the server.
-
+    
+    `.uploadir <folder path in server>`
+    **Usage:** Uploads a locally stored folder content to the chat.
+    
+    `.uploadas(stream|vn|all)`
+    **Usage:** Upload file in a specific formate.
+    
     `.upload <path in server>`
     **Usage:** Uploads a locally stored file to the chat.
     """)
