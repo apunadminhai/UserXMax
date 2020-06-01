@@ -20,7 +20,7 @@ from userbot.utils.tgdoc import *
 GITHUB_REPO_RE = r"(?:github\.com\/|^|\s+)([\w\d_\-]+)\/([\w\d_\-.]+)"
 
 
-@register(outgoing=True, pattern=r"^.gh(\s+[\S\s]+|$)")
+@register(outgoing=True, pattern=r"^\.gh(\s+[\S\s]+|$)")
 async def github_info(e):
     if not github:
         await e.edit("Github information has not been set up", delete_in=3)

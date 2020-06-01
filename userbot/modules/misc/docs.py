@@ -11,7 +11,7 @@ from userbot.events import register
 from userbot.utils import parse_arguments
 
 
-@register(outgoing=True, pattern=r"^.docs\s+(.*)")
+@register(outgoing=True, pattern=r"^\.docs\s+(.*)")
 async def doc_search(e):
     params = e.pattern_match.group(1)
     args, lib = parse_arguments(params, ['version'])

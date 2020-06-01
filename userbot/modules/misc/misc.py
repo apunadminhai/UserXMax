@@ -21,14 +21,14 @@ async def creator(e):
     await e.edit("Here's my God: [noobvishal](https://github.com/noobvishal)")
 
 
-@register(outgoing=True, pattern="^.repo$")
+@register(outgoing=True, pattern="^\.repo$")
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
         f"Click [here](https://github.com/noobvishal/UserXMax) to open my userbot's repository.")
 
 
-@register(outgoing=True, pattern="^.random")
+@register(outgoing=True, pattern="^\.random")
 async def randomise(items):
     """ For .random command, get a random item from the list of items. """
     itemo = (items.text[8:]).split()
@@ -42,7 +42,7 @@ async def randomise(items):
                      itemo[index] + "`")
 
 
-@register(outgoing=True, pattern="^.sleep( [0-9]+)?$")
+@register(outgoing=True, pattern="^\.sleep( [0-9]+)?$")
 async def sleepybot(time):
     """ For .sleep command, let the userbot snooze for a few second. """
     message = time.text
@@ -61,7 +61,7 @@ async def sleepybot(time):
         await time.edit("`OK, I'm awake now.`")
 
 
-@register(outgoing=True, pattern="^.shutdown$")
+@register(outgoing=True, pattern="^\.shutdown$")
 async def killdabot(event):
     """ For .shutdown command, shut the bot down."""
     await event.edit("`Goodbye *Windows XP shutdown sound*....`")
@@ -71,7 +71,7 @@ async def killdabot(event):
     await bot.disconnect()
 
 
-@register(outgoing=True, pattern="^.restart$")
+@register(outgoing=True, pattern="^\.restart$")
 async def killdabot(event):
     await event.edit("`Hold tight! I just need a second to be back up....`")
     if BOTLOG:
@@ -85,7 +85,7 @@ async def killdabot(event):
 
 
 # Copyright (c) Gegham Zakaryan | 2019
-@register(outgoing=True, pattern="^.repeat (.*)")
+@register(outgoing=True, pattern="^\.repeat (.*)")
 async def repeat(rep):
     cnt, txt = rep.pattern_match.group(1).split(' ', 1)
     replyCount = int(cnt)
@@ -99,7 +99,7 @@ async def repeat(rep):
     await rep.edit(replyText)
 
 
-@register(outgoing=True, pattern="^.raw$")
+@register(outgoing=True, pattern="^\.raw$")
 async def raw(event):
     the_real_message = None
     reply_to_id = None

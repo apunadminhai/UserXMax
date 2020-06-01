@@ -16,7 +16,7 @@ from userbot import bot
 from userbot.events import register
 
 
-@register(outgoing=True, pattern=r"^.qu(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.qu(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return

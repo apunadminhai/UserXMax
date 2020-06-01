@@ -60,7 +60,7 @@ async def mega_downloader_fallback(megadl, link):
     return
 
 
-@register(outgoing=True, pattern=r"^.mega(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.mega(?: |$)(.*)")
 async def mega_downloader(megadl):
     await megadl.edit("`Processing...`")
     msg_link = await megadl.get_reply_message()

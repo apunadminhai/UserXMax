@@ -12,7 +12,7 @@ from ..help import add_help_item
 from userbot.events import register
 
 
-@register(pattern=".info(?: |$)(.*)", outgoing=True)
+@register(pattern="\.info(?: |$)(.*)", outgoing=True)
 async def info(event):
     await event.edit("`Analysing the chat...`")
     chat = await get_chatinfo(event)

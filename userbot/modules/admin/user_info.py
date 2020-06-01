@@ -15,7 +15,7 @@ from userbot.utils import parse_arguments, get_user_from_event
 from userbot.utils.tgdoc import *
 
 
-@register(pattern=r"^.u(?:ser)?(\s+[\S\s]+|$)", outgoing=True)
+@register(pattern=r"^\.u(?:ser)?(\s+[\S\s]+|$)", outgoing=True)
 async def who(event: NewMessage.Event):
     """ For .user command, get info about a user. """
     if event.fwd_from:

@@ -15,7 +15,7 @@ from userbot.utils.tgdoc import Section, Bold, KeyValueItem, String
 SCANNING_MESSAGE = "**Scanning for potential spammers.** {}"
 
 
-@register(outgoing=True, pattern=r"^.s(?:pam)?b(?:lock)? scan$")
+@register(outgoing=True, pattern=r"^\.s(?:pam)?b(?:lock)? scan$")
 async def spamscan(e):
     users = []
     potentials = {}

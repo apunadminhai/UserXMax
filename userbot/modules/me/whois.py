@@ -19,11 +19,11 @@ from userbot import TEMP_DOWNLOAD_DIRECTORY
 from userbot.events import register
 
 
-@register(pattern=r"^.whois(?: |$)(.*)", outgoing=True)
+@register(pattern=r"^\.whois(?: |$)(.*)", outgoing=True)
 async def who(event):
 
     await event.edit(
-        "`Retrieving information on this account...`")
+        "`Retrieving information Oon this account...`")
 
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)

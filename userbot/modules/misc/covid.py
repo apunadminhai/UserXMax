@@ -30,6 +30,6 @@ add_help_item(
     "Misc",
     "Get an information about data covid-19 in your country.",
     """
-.covid [Country Code]
+.covid [Country Name]
     """
 )

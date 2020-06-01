@@ -21,7 +21,7 @@ REDFLAG_WORDS = [
 ]
 
 
-@register(outgoing=True, pattern=r"^.s(?:pam)?b(?:lock)? score(\s+[\S\s]+|$)")
+@register(outgoing=True, pattern=r"^\.s(?:pam)?b(?:lock)? score(\s+[\S\s]+|$)")
 async def spamscan_score(e):
     """ Test a single user against the spamscan algorithm """
     args, user = parse_arguments(e.pattern_match.group(1), ['forward'])

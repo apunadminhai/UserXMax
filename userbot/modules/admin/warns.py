@@ -12,7 +12,7 @@ from userbot.events import register
 import userbot.modules.sql_helper.warns_sql as sql
 
 
-@register(outgoing=True, pattern=r"^.warn (.*)")
+@register(outgoing=True, pattern=r"^\.warn (.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -41,7 +41,7 @@ async def _(event):
     await event.edit(reply, parse_mode="html")
 
 
-@register(outgoing=True, pattern=r"^.warns$")
+@register(outgoing=True, pattern=r"^\.warns$")
 async def _(event):
     if event.fwd_from:
         return
@@ -62,7 +62,7 @@ async def _(event):
         await event.edit("This user hasn't got any warnings!")
 
 
-@register(outgoing=True, pattern=r"^.resetwarns$")
+@register(outgoing=True, pattern=r"^\.resetwarns$")
 async def _(event):
     if event.fwd_from:
         return
