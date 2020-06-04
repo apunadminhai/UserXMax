@@ -17,7 +17,7 @@ import sys
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from userbot import HEROKU_APIKEY, HEROKU_APPNAME, UPSTREAM_REPO_URL, UPSTREAM_REPO_BRANCH
+from userbot import HEROKU_API_KEY, HEROKU_APP_NAME, UPSTREAM_REPO_URL, UPSTREAM_REPO_BRANCH
 from userbot.events import register
 from ..help import add_help_item
 
@@ -47,20 +47,20 @@ async def update_requirements():
 
 
 async def deploy(event, repo, ups_rem, ac_br, txt):
-    if HEROKU_APIKEY is not None:
+    if HEROKU_API_KEY is not None:
         import heroku3
-        heroku = heroku3.from_key(HEROKU_APIKEY)
+        heroku = heroku3.from_key(HEROKU_API_KEY)
         heroku_app = None
         heroku_applications = heroku.apps()
-        if HEROKU_APPNAME is None:
+        if HEROKU_APP_NAME is None:
             await event.edit(
-                '`[HEROKU]: Please set up the` **HEROKU_APPNAME** `variable'
+                '`[HEROKU]: Please set up the` **HEROKU_APP_NAME** `variable'
                 ' to be able to deploy newest changes of userbot.`'
             )
             repo.__del__()
             return
         for app in heroku_applications:
-            if app.name == HEROKU_APPNAME:
+            if app.name == HEROKU_APP_NAME:
                 heroku_app = app
                 break
         if heroku_app is None:
@@ -75,7 +75,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
         heroku_git_url = heroku_app.git_url.replace(
-            "https://", "https://api:" + HEROKU_APIKEY + "@")
+            "https://", "https://api:" + HEROKU_API_KEY + "@")
         if "heroku" in repo.remotes:
             remote = repo.remote("heroku")
             remote.set_url(heroku_git_url)
@@ -91,7 +91,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
                          'Restarting, please wait...`')
     else:
         await event.edit('`[HEROKU]:'
-                         '\nPlease set up` **HEROKU_APIKEY** `variable.`'
+                         '\nPlease set up` **HEROKU_API_KEY** `variable.`'
                          )
     return
 
