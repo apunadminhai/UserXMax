@@ -528,6 +528,10 @@ async def ocr_space_file(filename,
 
 @register(pattern=r".ocr (.*)", outgoing=True)
 async def ocr(event):
+    if not OCR_SPACE_API_KEY:
+        return await event.edit(
+            "`Error: OCR.Space API key is missing! Add it to environment variables or config.env.`"
+        )
     await event.edit("`Reading...`")
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)

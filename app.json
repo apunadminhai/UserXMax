@@ -34,11 +34,11 @@
       "description": "Default branch of your custom fork repo.",
       "required": false
     },
-    "HEROKU_APIKEY": {
+    "HEROKU_API_KEY": {
       "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
       "required": true
     },
-    "HEROKU_APPNAME": {
+    "HEROKU_APP_NAME": {
       "description": "Add the Heroku app name here. It helps with userbot updates.",
       "required": true
     },
