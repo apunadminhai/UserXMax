@@ -70,6 +70,9 @@ LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 
+# Country Code For JustWatch Module
+WATCH_COUNTRY = sb(os.environ.get("WATCH_COUNTRY", None))
+
 # GitHub Repos Module
 GITHUB_USERNAME = os.environ.get("GITHUB_USERNAME", None)
 GITHUB_PASSWORD = os.environ.get("GITHUB_PASSWORD", None)
