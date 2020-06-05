@@ -7,8 +7,8 @@ import requests
 
 from justwatch import JustWatch
 
-from userevent.events import register
-from userevent import (WATCH_COUNTRY, bot)
+from userbot.events import register
+from userbot import (WATCH_COUNTRY, bot)
 from ..help import add_help_item
 
 def get_stream_data(query):
