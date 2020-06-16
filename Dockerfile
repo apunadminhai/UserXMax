@@ -48,8 +48,8 @@ RUN apk add --no-cache --update \
     sqlite-dev \
     sudo \
     zlib-dev \
-    zip
-    
+    zip \
+    unrar
 
 #
 # Clone repo and prepare working directory
