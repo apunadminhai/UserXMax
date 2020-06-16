@@ -48,3 +48,4 @@ covid
 python-magic
 telegraph
 justwatch
+unrar
